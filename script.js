@@ -39,6 +39,9 @@ totalScore1.textContent = 0;
 const restartGame = function () {
   scores = [0, 0];
   currentScore = 0;
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove('player--winner');
   activePlayer = 0;
   gameOnButton();
   totalScore0.textContent = 0;
